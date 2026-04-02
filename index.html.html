@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>SteelCoal Connect | Trusted B2B Trading Platform</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+      background: #f4f7fc;
+      color: #1e2a3a;
+      line-height: 1.5;
+      scroll-behavior: smooth;
+    }
+
+    /* Container */
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Typography */
+    h1, h2, h3 {
+      font-weight: 700;
+      line-height: 1.2;
+    }
+
+    h1 {
+      font-size: clamp(2rem, 5vw, 3.5rem);
+    }
+
+    h2 {
+      font-size: clamp(1.8rem, 4vw, 2.5rem);
+      margin-bottom: 1rem;
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-block;
+      background: #1e3a5f;
+      color: white;
+      font-weight: 600;
+      padding: 12px 28px;
+      border-radius: 40px;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      border: none;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    .btn-outline {
+      background: transparent;
+      border: 2px solid #1e3a5f;
+      color: #1e3a5f;
+    }
+
+    .btn-outline:hover {
+      background: #1e3a5f;
+      color: white;
+    }
+
+    .btn-primary {
+      background: #d97706;
+      box-shadow: 0 4px 10px rgba(217,119,6,0.2);
+    }
+
+    .btn-primary:hover {
+      background: #b45309;
+      transform: translateY(-2px);
+    }
+
+    /* Header / Nav */
+    .navbar {
+      background: white;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .nav-flex {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 0;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, #1e3a5f, #d97706);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      font-weight: 500;
+      color: #1e2a3a;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: #d97706;
+    }
+
+    /* Hero */
+    .hero {
+      padding: 80px 0 60px;
+      background: linear-gradient(135deg, #eef2f5 0%, #ffffff 100%);
+    }
+
+    .hero-grid {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 40px;
+    }
+
+    .hero-content {
+      flex: 1;
+    }
+
+    .hero-image {
+      flex: 1;
+      text-align: center;
+    }
+
+    .hero-image img {
+      max-width: 100%;
+      border-radius: 24px;
+    }
+
+    .badge {
+      background: #e2e8f0;
+      color: #1e3a5f;
+      display: inline-block;
+      padding: 6px 14px;
+      border-radius: 40px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+
+    /* Feature cards */
+    .features {
+      padding: 70px 0;
+      background: white;
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 32px;
+      margin-top: 40px;
+    }
+
+    .feature-card {
+      background: #f8fafc;
+      padding: 28px;
+      border-radius: 24px;
+      transition: all 0.2s;
+      border: 1px solid #e2e8f0;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 25px -12px rgba(0,0,0,0.1);
+    }
+
+    /* Forms Section */
+    .forms-section {
+      padding: 70px 0;
+      background: #f1f5f9;
+    }
+
+    .forms-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+      gap: 40px;
+      margin-top: 40px;
+    }
+
+    .form-card {
+      background: white;
+      border-radius: 32px;
+      padding: 32px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      font-weight: 600;
+      display: block;
+      margin-bottom: 8px;
+      color: #1e2a3a;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 12px 16px;
+      border: 1px solid #cbd5e1;
+      border-radius: 16px;
+      font-size: 1rem;
+      font-family: inherit;
+      background: #fff;
+      transition: 0.2s;
+    }
+
+    input:focus, select:focus, textarea:focus {
+      outline: none;
+      border-color: #d97706;
+      box-shadow: 0 0 0 3px rgba(217,119,6,0.2);
+    }
+
+    /* Trust Section */
+    .trust {
+      padding: 60px 0;
+      text-align: center;
+      background: white;
+    }
+
+    .trust-logos {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+      margin-top: 40px;
+      opacity: 0.7;
+    }
+
+    /* Footer */
+    footer {
+      background: #0f172a;
+      color: #cbd5e1;
+      padding: 40px 0;
+      text-align: center;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .nav-flex {
+        flex-direction: column;
+        gap: 16px;
+      }
+      .forms-grid {
+        grid-template-columns: 1fr;
+      }
+      .hero-grid {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+
+    /* price ticker */
+    .ticker {
+      background: #1e293b;
+      color: #facc15;
+      padding: 8px 0;
+      font-size: 0.9rem;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+
+    .ticker span {
+      display: inline-block;
+      padding-left: 100%;
+      animation: ticker 20s linear infinite;
+    }
+
+    @keyframes ticker {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-100%); }
+    }
+
+    .success-msg {
+      background: #dcfce7;
+      color: #166534;
+      padding: 12px;
+      border-radius: 12px;
+      margin-top: 20px;
+      text-align: center;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+<div class="ticker">
+  <span>📈 TMT Steel (Fe500) : ₹58,500/MT | Coal GCV 5500 : ₹8,200/MT | HR Coil : ₹64,000/MT | Updated daily ✅</span>
+</div>
+
+<header class="navbar">
+  <div class="container nav-flex">
+    <div class="logo">⚡ SteelCoal Connect</div>
+    <div class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#buyers">For Buyers</a>
+      <a href="#sellers">For Sellers</a>
+      <a href="#how-it-works">How it works</a>
+      <a href="#contact" class="btn-outline btn" style="padding: 8px 20px;">Contact</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <!-- Hero -->
+  <section id="home" class="hero">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <div class="badge">🔒 No direct trading • Zero middleman bypass</div>
+        <h1>Trade Steel & Coal <span style="color:#d97706;">with Confidence</span></h1>
+        <p style="font-size: 1.2rem; margin: 24px 0 32px; max-width: 550px;">We connect genuine buyers and verified sellers. You raise an enquiry, we match you, arrange logistics & quality check. One trusted platform – one commission.</p>
+        <a href="#buyers" class="btn btn-primary">📢 Raise Enquiry →</a>
+        <a href="#sellers" class="btn" style="margin-left: 16px; background: #1e3a5f;">🏭 Become a Seller</a>
+      </div>
+      <div class="hero-image">
+        <img src="https://placehold.co/600x400/1e3a5f/white?text=Steel+%26+Coal+Trading+Hub" alt="Trading illustration">
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <div class="features">
+    <div class="container">
+      <h2 style="text-align:center;">Why choose our platform?</h2>
+      <div class="features-grid">
+        <div class="feature-card">🔍 <strong>Blind trading</strong><br>Buyers & sellers never see each other's contacts. We mediate every deal – no bypass.</div>
+        <div class="feature-card">🚚 <strong>End‑to‑end logistics</strong><br>We arrange trucks, track delivery, and ensure material reaches your site safely.</div>
+        <div class="feature-card">💰 <strong>Single transparent commission</strong><br>Our margin is built into the price – no hidden charges.</div>
+        <div class="feature-card">📄 <strong>Quality assurance</strong><br>Mill test certificates, grade verification, and seller audits included.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Forms : Buyer Enquiry & Seller Registration -->
+  <section id="buyers" class="forms-section">
+    <div class="container">
+      <h2 style="text-align:center;">📋 Raise a Buyer Enquiry</h2>
+      <p style="text-align:center; max-width:700px; margin:0 auto 20px;">Tell us what you need – we’ll find the best matched seller and deliver to your site.</p>
+      <div class="forms-grid">
+        <!-- Buyer Form -->
+        <div class="form-card">
+          <h3 style="margin-bottom: 20px;">Buyer Enquiry</h3>
+          <form id="buyerForm" action="https://formspree.io/f/mwvwvnbk" method="POST">
+            <div class="form-group">
+              <label>Full Name *</label>
+              <input type="text" name="name" required>
+            </div>
+            <div class="form-group">
+              <label>Company / Business Name</label>
+              <input type="text" name="company">
+            </div>
+            <div class="form-group">
+              <label>Product Required *</label>
+              <select name="product" required>
+                <option value="">Select</option>
+                <option>Steel - TMT Bars</option>
+                <option>Steel - HR Coils</option>
+                <option>Steel - CR Coils</option>
+                <option>Steel - Structural (Angle/Channel)</option>
+                <option>Coal - Coking</option>
+                <option>Coal - Thermal/Steam</option>
+                <option>Coal - Washed Coal</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Grade / Specification</label>
+              <input type="text" name="grade" placeholder="e.g., Fe500, Fe550, GCV 5000, Ash <14%">
+            </div>
+            <div class="form-group">
+              <label>Quantity (MT / Truckload)</label>
+              <input type="text" name="quantity" placeholder="e.g., 20 MT or 1 truck">
+            </div>
+            <div class="form-group">
+              <label>Delivery Location (City/State)</label>
+              <input type="text" name="location" required>
+            </div>
+            <div class="form-group">
+              <label>Phone / WhatsApp *</label>
+              <input type="tel" name="phone" required>
+            </div>
+            <div class="form-group">
+              <label>Email</label>
+              <input type="email" name="email">
+            </div>
+            <button type="submit" class="btn btn-primary" style="width:100%">Submit Enquiry</button>
+            <div id="buyerSuccess" class="success-msg">✅ Enquiry sent! Our team will contact you shortly.</div>
+          </form>
+        </div>
+
+        <!-- Seller Registration -->
+        <div class="form-card" id="sellers">
+          <h3 style="margin-bottom: 20px;">Seller / Supplier Registration</h3>
+          <form id="sellerForm" action="https://formspree.io/f/mvzvaojv" method="POST">
+            <div class="form-group">
+              <label>Seller Company Name *</label>
+              <input type="text" name="seller_company" required>
+            </div>
+            <div class="form-group">
+              <label>Products You Deal In *</label>
+              <input type="text" name="products" placeholder="e.g., TMT Steel, Structural, Thermal Coal">
+            </div>
+            <div class="form-group">
+              <label>Stock Location (City)</label>
+              <input type="text" name="stock_location">
+            </div>
+            <div class="form-group">
+              <label>Contact Person *</label>
+              <input type="text" name="contact_person" required>
+            </div>
+            <div class="form-group">
+              <label>Phone / WhatsApp *</label>
+              <input type="tel" name="phone" required>
+            </div>
+            <div class="form-group">
+              <label>Email</label>
+              <input type="email" name="email">
+            </div>
+            <button type="submit" class="btn btn-primary" style="width:100%; background:#1e3a5f;">Register as Seller</button>
+            <div id="sellerSuccess" class="success-msg">✅ Registration sent! We’ll verify and list your inventory.</div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How it works -->
+  <section id="how-it-works" class="trust">
+    <div class="container">
+      <h2>⚙️ How the platform works</h2>
+      <div style="display:flex; flex-wrap:wrap; gap:24px; justify-content:center; margin-top:40px;">
+        <div style="max-width:200px;"><span style="font-size:2rem;">1️⃣</span><br><strong>Buyer raises enquiry</strong><br>via form above</div>
+        <div style="max-width:200px;"><span style="font-size:2rem;">2️⃣</span><br><strong>We match with verified sellers</strong><br>(you never see them)</div>
+        <div style="max-width:200px;"><span style="font-size:2rem;">3️⃣</span><br><strong>We negotiate, add commission</strong><br>& share final price</div>
+        <div style="max-width:200px;"><span style="font-size:2rem;">4️⃣</span><br><strong>Order confirmed + truck arranged</strong><br>tracking provided</div>
+        <div style="max-width:200px;"><span style="font-size:2rem;">5️⃣</span><br><strong>Material delivered, payment settled</strong><br>our commission secured</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust / Service area -->
+  <div class="trust" style="background:#f8fafc;">
+    <div class="container">
+      <h3>🌍 Active in major industrial regions</h3>
+      <div class="trust-logos">
+        <span>Odisha</span> • <span>Chhattisgarh</span> • <span>West Bengal</span> • <span>Rajasthan</span> • <span>Jharkhand</span>
+      </div>
+      <p style="margin-top:30px;">✅ 100% blind trading – we never share buyer/seller contacts directly.<br>✅ Commission only on successful deals. No hidden fees.</p>
+    </div>
+  </div>
+</main>
+
+<footer id="contact">
+  <div class="container">
+    <p>📧 steelcoalconnect@gmail.com | 📞 +91-9438623450 (Admin / Trader)</p>
+    <p style="margin-top: 16px;">© 2025 SteelCoal Connect – Bridging the gap between genuine steel & coal buyers and sellers.</p>
+  </div>
+</footer>
+
+<script>
+  // Simple frontend success messages (forms will actually submit to Formspree)
+  const buyerForm = document.getElementById('buyerForm');
+  const sellerForm = document.getElementById('sellerForm');
+  const buyerSuccess = document.getElementById('buyerSuccess');
+  const sellerSuccess = document.getElementById('sellerSuccess');
+
+  if (buyerForm) {
+    buyerForm.addEventListener('submit', function(e) {
+      // Show success message even before actual submit (for UX)
+      // but actual submission goes to Formspree. We also prevent double message.
+      setTimeout(() => {
+        buyerSuccess.style.display = 'block';
+        buyerForm.reset();
+        setTimeout(() => { buyerSuccess.style.display = 'none'; }, 5000);
+      }, 100);
+      // Note: the form will still submit to Formspree because we didn't preventDefault.
+      // If you want to preventDefault and use fetch, you can but easier to let it redirect.
+      // For better experience, we keep native submit.
+    });
+  }
+
+  if (sellerForm) {
+    sellerForm.addEventListener('submit', function(e) {
+      setTimeout(() => {
+        sellerSuccess.style.display = 'block';
+        sellerForm.reset();
+        setTimeout(() => { sellerSuccess.style.display = 'none'; }, 5000);
+      }, 100);
+    });
+  }
+</script>
+
+<!-- Note: Replace action URLs with your actual Formspree endpoints -->
+</body>
+</html>
