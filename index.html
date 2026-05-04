@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-  <title>SteelCoal Connect | Trusted B2B Trading Platform</title>
+  <title>SteelCoal Connect | Trusted B2B Trading Platform – All Steel & Coal Variants</title>
   <style>
     * {
       margin: 0;
@@ -193,7 +193,7 @@
 
     .forms-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
       gap: 40px;
       margin-top: 40px;
     }
@@ -302,12 +302,17 @@
       text-align: center;
       display: none;
     }
+    
+    optgroup {
+      font-weight: 600;
+      background: #f9fafb;
+    }
   </style>
 </head>
 <body>
 
 <div class="ticker">
-  <span>📈 TMT Steel (Fe500) : ₹58,500/MT | Coal GCV 5500 : ₹8,200/MT | HR Coil : ₹64,000/MT | Updated daily ✅</span>
+  <span>📊 STEEL: TMT Fe500D | HR Coils | CR Coils | Galvanized (GI) | Wire Rods | Angles/Channels | Plates (MS/Chequered) | Stainless Steel 304/316 | Alloy Steel | Pipes (ERW/Seamless) || COAL: Coking (Grade I/II) | Thermal GCV 5500+ | Washed Coal | Anthracite | Bituminous | PCI Coal | Lignite | Pet Coke | Semi-soft Coking 🔥 Updated daily ✅</span>
 </div>
 
 <header class="navbar">
@@ -328,14 +333,14 @@
   <section id="home" class="hero">
     <div class="container hero-grid">
       <div class="hero-content">
-        <div class="badge">🔒 No direct trading • Zero middleman bypass</div>
-        <h1>Trade Steel & Coal <span style="color:#d97706;">with Confidence</span></h1>
-        <p style="font-size: 1.2rem; margin: 24px 0 32px; max-width: 550px;">We connect genuine buyers and verified sellers. You raise an enquiry, we match you, arrange logistics & quality check. One trusted platform – one commission.</p>
+        <div class="badge">🔒 No direct trading • Zero middleman bypass • All steel & coal grades</div>
+        <h1>Trade All <span style="color:#d97706;">Steel & Coal</span> Variants with Confidence</h1>
+        <p style="font-size: 1.2rem; margin: 24px 0 32px; max-width: 550px;">From TMT & HR Coils to Stainless Steel, from Coking Coal to Anthracite – we connect you with verified suppliers. Raise enquiry, we handle matching, logistics, quality & commission. One trusted platform.</p>
         <a href="#buyers" class="btn btn-primary">📢 Raise Enquiry →</a>
         <a href="#sellers" class="btn" style="margin-left: 16px; background: #1e3a5f;">🏭 Become a Seller</a>
       </div>
       <div class="hero-image">
-        <img src="https://placehold.co/600x400/1e3a5f/white?text=Steel+%26+Coal+Trading+Hub" alt="Trading illustration">
+        <img src="https://placehold.co/600x400/1e3a5f/white?text=All+Steel+%26+Coal+Variants" alt="Steel and coal trading hub">
       </div>
     </div>
   </section>
@@ -353,15 +358,15 @@
     </div>
   </div>
 
-  <!-- Forms : Buyer Enquiry & Seller Registration -->
+  <!-- Forms : Buyer Enquiry & Seller Registration (EXPANDED STEEL & COAL VARIANTS) -->
   <section id="buyers" class="forms-section">
     <div class="container">
-      <h2 style="text-align:center;">📋 Raise a Buyer Enquiry</h2>
-      <p style="text-align:center; max-width:700px; margin:0 auto 20px;">Tell us what you need – we’ll find the best matched seller and deliver to your site.</p>
+      <h2 style="text-align:center;">📋 Raise a Buyer Enquiry – All Steel & Coal Types</h2>
+      <p style="text-align:center; max-width:700px; margin:0 auto 20px;">Choose from every industrial steel and coal variant. We match you with verified sellers across India.</p>
       <div class="forms-grid">
-        <!-- Buyer Form -->
+        <!-- Buyer Form with expanded dropdowns -->
         <div class="form-card">
-          <h3 style="margin-bottom: 20px;">Buyer Enquiry</h3>
+          <h3 style="margin-bottom: 20px;">Buyer Enquiry (All Variants)</h3>
           <form id="buyerForm" action="https://formspree.io/f/mwvwvnbk" method="POST">
             <div class="form-group">
               <label>Full Name *</label>
@@ -372,25 +377,51 @@
               <input type="text" name="company">
             </div>
             <div class="form-group">
-              <label>Product Required *</label>
+              <label>Product Required * (Complete steel & coal range)</label>
               <select name="product" required>
-                <option value="">Select</option>
-                <option>Steel - TMT Bars</option>
-                <option>Steel - HR Coils</option>
-                <option>Steel - CR Coils</option>
-                <option>Steel - Structural (Angle/Channel)</option>
-                <option>Coal - Coking</option>
-                <option>Coal - Thermal/Steam</option>
-                <option>Coal - Washed Coal</option>
+                <option value="" disabled selected>Select product type</option>
+                <optgroup label="🔩 STEEL PRODUCTS (All Grades)">
+                  <option>Steel - TMT Bars (Fe415/Fe500/Fe550/Fe600)</option>
+                  <option>Steel - HR Coils / Sheets (Hot Rolled)</option>
+                  <option>Steel - CR Coils (Cold Rolled)</option>
+                  <option>Steel - Galvanized Coils / Sheets (GI/GP/GC)</option>
+                  <option>Steel - Pre-painted / Color Coated Coils</option>
+                  <option>Steel - Wire Rods (Mild Steel / High Carbon)</option>
+                  <option>Steel - Angles (Equal/Unequal)</option>
+                  <option>Steel - Channels / C-Purlin</option>
+                  <option>Steel - I-Beams / H-Beams / Heavy Structures</option>
+                  <option>Steel - Mild Steel Plates (Chequered / Ship Building)</option>
+                  <option>Steel - Stainless Steel (SS304 / SS316 / SS409)</option>
+                  <option>Steel - Alloy Steel (EN series / Chrome/Moly)</option>
+                  <option>Steel - ERW / Seamless Pipes & Tubes</option>
+                  <option>Steel - Sections (IPE/HEA/UNP/Bars)</option>
+                  <option>Steel - Billets / Ingots / Blooms</option>
+                  <option>Steel - Roofing Sheets / Tiles</option>
+                  <option>Steel - Heavy Plates (Boiler Quality / Wear Resistant)</option>
+                  <option>Steel - Scrap (Heavy melting / Shredded)</option>
+                </optgroup>
+                <optgroup label="🪨 COAL PRODUCTS (All Types & Grades)">
+                  <option>Coal - Coking Coal (Prime / Medium / Soft)</option>
+                  <option>Coal - Thermal / Steam Coal (GCV 4000-6000+ kcal/kg)</option>
+                  <option>Coal - Washed Coal (Low Ash)</option>
+                  <option>Coal - Anthracite Coal (Ultra High GCV)</option>
+                  <option>Coal - Bituminous Coal</option>
+                  <option>Coal - Lignite / Brown Coal</option>
+                  <option>Coal - PCI Coal (Pulverised Coal Injection)</option>
+                  <option>Coal - Semi-soft Coking Coal</option>
+                  <option>Pet Coke - Calcined / Raw Petcoke (Fuel Grade)</option>
+                  <option>Coal - Steam Non-Coking (Power/Industrial)</option>
+                  <option>Coal - Metallurgical Coke (Nut Coke / Blast Furnace)</option>
+                </optgroup>
               </select>
             </div>
             <div class="form-group">
-              <label>Grade / Specification</label>
-              <input type="text" name="grade" placeholder="e.g., Fe500, Fe550, GCV 5000, Ash <14%">
+              <label>Grade / Specification (optional but preferred)</label>
+              <input type="text" name="grade" placeholder="e.g., Fe550D, GCV 5300, SS304, Ash<12%, IS2062, pipe thickness, etc.">
             </div>
             <div class="form-group">
-              <label>Quantity (MT / Truckload)</label>
-              <input type="text" name="quantity" placeholder="e.g., 20 MT or 1 truck">
+              <label>Quantity (MT / Truckload / Coils)</label>
+              <input type="text" name="quantity" placeholder="e.g., 50 MT, 2 trucks, 10 coils">
             </div>
             <div class="form-group">
               <label>Delivery Location (City/State)</label>
@@ -404,12 +435,12 @@
               <label>Email</label>
               <input type="email" name="email">
             </div>
-            <button type="submit" class="btn btn-primary" style="width:100%">Submit Enquiry</button>
-            <div id="buyerSuccess" class="success-msg">✅ Enquiry sent! Our team will contact you shortly.</div>
+            <button type="submit" class="btn btn-primary" style="width:100%">Submit Enquiry (All Variants)</button>
+            <div id="buyerSuccess" class="success-msg">✅ Enquiry sent! Our team will connect you with matched sellers within 24 hours.</div>
           </form>
         </div>
 
-        <!-- Seller Registration -->
+        <!-- Seller Registration (updated placeholder for all steel & coal variants) -->
         <div class="form-card" id="sellers">
           <h3 style="margin-bottom: 20px;">Seller / Supplier Registration</h3>
           <form id="sellerForm" action="https://formspree.io/f/mvzvaojv" method="POST">
@@ -418,11 +449,11 @@
               <input type="text" name="seller_company" required>
             </div>
             <div class="form-group">
-              <label>Products You Deal In *</label>
-              <input type="text" name="products" placeholder="e.g., TMT Steel, Structural, Thermal Coal">
+              <label>Products You Deal In * (All Steel & Coal types)</label>
+              <input type="text" name="products" placeholder="e.g., TMT Fe550, HR coils, GI sheets, Structural, Stainless 304, Coking coal, Thermal coal GCV 5500, Anthracite, PCI, Petcoke">
             </div>
             <div class="form-group">
-              <label>Stock Location (City)</label>
+              <label>Stock Location (City / Plant)</label>
               <input type="text" name="stock_location">
             </div>
             <div class="form-group">
@@ -437,8 +468,8 @@
               <label>Email</label>
               <input type="email" name="email">
             </div>
-            <button type="submit" class="btn btn-primary" style="width:100%; background:#1e3a5f;">Register as Seller</button>
-            <div id="sellerSuccess" class="success-msg">✅ Registration sent! We’ll verify and list your inventory.</div>
+            <button type="submit" class="btn btn-primary" style="width:100%; background:#1e3a5f;">Register as Seller – All Categories</button>
+            <div id="sellerSuccess" class="success-msg">✅ Registration sent! We'll verify and list your inventory (all steel & coal types).</div>
           </form>
         </div>
       </div>
@@ -448,38 +479,41 @@
   <!-- How it works -->
   <section id="how-it-works" class="trust">
     <div class="container">
-      <h2>⚙️ How the platform works</h2>
+      <h2>⚙️ How the platform works (For any steel/coal variant)</h2>
       <div style="display:flex; flex-wrap:wrap; gap:24px; justify-content:center; margin-top:40px;">
-        <div style="max-width:200px;"><span style="font-size:2rem;">1️⃣</span><br><strong>Buyer raises enquiry</strong><br>via form above</div>
-        <div style="max-width:200px;"><span style="font-size:2rem;">2️⃣</span><br><strong>We match with verified sellers</strong><br>(you never see them)</div>
-        <div style="max-width:200px;"><span style="font-size:2rem;">3️⃣</span><br><strong>We negotiate, add commission</strong><br>& share final price</div>
-        <div style="max-width:200px;"><span style="font-size:2rem;">4️⃣</span><br><strong>Order confirmed + truck arranged</strong><br>tracking provided</div>
-        <div style="max-width:200px;"><span style="font-size:2rem;">5️⃣</span><br><strong>Material delivered, payment settled</strong><br>our commission secured</div>
+        <div style="max-width:200px;"><span style="font-size:2rem;">1️⃣</span><br><strong>Buyer raises enquiry</strong><br>with specific grade/coal type</div>
+        <div style="max-width:200px;"><span style="font-size:2rem;">2️⃣</span><br><strong>We match with verified sellers</strong><br>(no direct contact)</div>
+        <div style="max-width:200px;"><span style="font-size:2rem;">3️⃣</span><br><strong>We negotiate, add commission</strong><br>share final quote</div>
+        <div style="max-width:200px;"><span style="font-size:2rem;">4️⃣</span><br><strong>Order confirmed + logistics arranged</strong><br>full tracking</div>
+        <div style="max-width:200px;"><span style="font-size:2rem;">5️⃣</span><br><strong>Material delivered, payment secured</strong><br>our commission only on success</div>
       </div>
     </div>
   </section>
 
-  <!-- Trust / Service area -->
+  <!-- Trust / Service area with all variants highlight -->
   <div class="trust" style="background:#f8fafc;">
     <div class="container">
-      <h3>🌍 Active in major industrial regions</h3>
+      <h3>🌍 Serving all industrial needs – every steel grade & coal specification</h3>
       <div class="trust-logos">
-        <span>Odisha</span> • <span>Chhattisgarh</span> • <span>West Bengal</span> • <span>Rajasthan</span> • <span>Jharkhand</span>
+        <span>TMT Fe500D</span> • <span>HR/CR Coils</span> • <span>Galvanized/GI</span> • <span>Stainless 304/316</span> • <span>Plates/Chequered</span> • <span>Wire Rods</span> • <span>Structural</span> • <span>Pipes/Tubes</span>
       </div>
-      <p style="margin-top:30px;">✅ 100% blind trading – we never share buyer/seller contacts directly.<br>✅ Commission only on successful deals. No hidden fees.</p>
+      <div class="trust-logos" style="margin-top: 10px;">
+        <span>Coking Coal</span> • <span>Thermal Coal</span> • <span>Washed Coal</span> • <span>Anthracite</span> • <span>PCI Coal</span> • <span>Lignite</span> • <span>Pet Coke</span> • <span>Semi-soft Coking</span>
+      </div>
+      <p style="margin-top:30px;">✅ 100% blind trading – we never share contacts directly.<br>✅ Commission only on successful deals. Full coverage of all steel & coal products available in India.</p>
     </div>
   </div>
 </main>
 
 <footer id="contact">
   <div class="container">
-    <p>📧 steelcoalconnect@gmail.com | 📞 +91-9438623450 (Admin / Trader)</p>
-    <p style="margin-top: 16px;">© 2025 SteelCoal Connect – Bridging the gap between genuine steel & coal buyers and sellers.</p>
+    <p>📧 steelcoalconnect@gmail.com | 📞 +91-9438623450 (Admin / Trading Desk)</p>
+    <p style="margin-top: 16px;">© 2025 SteelCoal Connect – Bridging the gap for all steel & coal variants: TMT, HR, CR, GI, Alloy, Stainless, Coking, Thermal, Anthracite, PCI and more.</p>
   </div>
 </footer>
 
 <script>
-  // Simple frontend success messages (forms will actually submit to Formspree)
+  // Frontend success messages without altering form submission URLs (Formspree untouched)
   const buyerForm = document.getElementById('buyerForm');
   const sellerForm = document.getElementById('sellerForm');
   const buyerSuccess = document.getElementById('buyerSuccess');
@@ -487,16 +521,13 @@
 
   if (buyerForm) {
     buyerForm.addEventListener('submit', function(e) {
-      // Show success message even before actual submit (for UX)
-      // but actual submission goes to Formspree. We also prevent double message.
+      // We do not prevent default — form action remains original Formspree URL.
+      // Show success and reset for better UX, but still submits to backend.
       setTimeout(() => {
         buyerSuccess.style.display = 'block';
         buyerForm.reset();
         setTimeout(() => { buyerSuccess.style.display = 'none'; }, 5000);
       }, 100);
-      // Note: the form will still submit to Formspree because we didn't preventDefault.
-      // If you want to preventDefault and use fetch, you can but easier to let it redirect.
-      // For better experience, we keep native submit.
     });
   }
 
@@ -510,7 +541,6 @@
     });
   }
 </script>
-
-<!-- Note: Replace action URLs with your actual Formspree endpoints -->
+<!-- All Formspree URLs are kept exactly as original: buyer action = https://formspree.io/f/mwvwvnbk , seller action = https://formspree.io/f/mvzvaojv -->
 </body>
 </html>
